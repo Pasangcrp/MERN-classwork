@@ -204,41 +204,42 @@
 
 
 // // Exercise 1 JS
+const Header = (props) => {
+    return <h1>{props.name}</h1>
+  }
+  
+  const Part = (props) => {
+    return <p>{props.part.name} {props.part.excercises}</p>
+  }
+  
+  const Content = (props) => {
+    return props.parts.map(p => <Part part={p}/>);
+  }
+  
+  const Total = (props) => {
+    var total = 0;
+    props.parts.forEach(val => total+=val.excercises);
+    return <p>Total: {total}</p>
+  }
+  
+  const App = () => {
+    const course = 'Half Stack Program'
+    const part1 = {
+      'name': 'Fundamentals of React',
+      'excercises': 10
+    }
+    const part2 = {
+      'name': 'Fundamentals of React',
+      'excercises': 20
+    }
+    return (
+      <div>
+        <Header name={course} />
+        <Content parts={[part1, part2]} />
+        <Total parts={[part1, part2]}/>
+      </div>
+    )
+  }
+  
+  export default App
 
-// const Header = (props) => {
-//  return <h1>{props.name}</h1>
-   
-//    const Part = (props) => {
-//     const totalExercises = props.part.exercises;
-//     return <p>{props.part.name} {totalExercises}</p>
-//    }
-//  const Content = (props) => {
-//    return props.parts.map(p => <Part part = {p} />);
-//    }
-
-// const App = () => {
-//  const course = 'Half Stack application development' 
-//  const part1 ={
-//     name: 'Fundamentals of React',
-//     exercises: 10
-//  }
-//  const part2 ={
-//     name: 'Using props to pass data',
-//     exercises: 7
-//  }
-//  const part3 = {
-//     name: 'State of a component',
-//     exercises: 14
-//  } 
-
-//  return (
-//     <div>
-//       <Header name ={course}/>
-//       <Content parts = {[part1,part2,part3]} />
-      
-//     </div>
-    
-//  )
-
-// }
-// export default App
