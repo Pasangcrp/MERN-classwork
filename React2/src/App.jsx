@@ -1,4 +1,4 @@
- //1.DESTRUCTURING
+ //!1.DESTRUCTURING
 
 //  const Hello = ({name, age}) => {
 //   return <h1>Hello, {name} age: {age}</h1>

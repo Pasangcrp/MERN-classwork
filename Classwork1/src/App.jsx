@@ -1,4 +1,4 @@
-// //Exercise 1
+//! Exercise 1
 // import { useState } from "react";
 // const App = () =>{
 //     const [good,setGood] = useState(0)
@@ -47,61 +47,68 @@
 
 // export default App
 
-// EXERCISE 2
-import { useState } from "react";
 
-const App = () => {
-  const [good, setGood] = useState(0);
-  const [neutral, setNeutral] = useState(0);
-  const [bad, setBad] = useState(0);
-  const [total, setTotal] = useState(0);
-  const [percent, setPercent] = useState({
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  });
 
-  const handleGood = () => {
-    setGood(good + 1);
-  };
+//! EXERCISE 2
 
-  const handleNeutral = () => {
-    setNeutral(neutral + 1);
-  };
+// import { useState } from "react";
 
-  const handleBad = () => {
-    setBad(bad + 1);
-  };
+// const App = () => {
+//   const [good, setGood] = useState(0);
+//   const [neutral, setNeutral] = useState(0);
+//   const [bad, setBad] = useState(0);
+//   const [total, setTotal] = useState(0);
+//   const [percent, setPercent] = useState({
+//     good: 0,
+//     neutral: 0,
+//     bad: 0,
+//   });
 
-  const handleTotal = () => {
-    const newTotal = good + neutral + bad;
-    setTotal(newTotal);
-    setPercent({
-      good: (good / newTotal) * 100,
-      neutral: (neutral / newTotal) * 100,
-      bad: (bad / newTotal) * 100,
-    });
-  };
+//   const handleGood = () => {
+//     setGood(good + 1);
+//   };
 
-  return (
-    <div>
-      <h1>Give Feedback</h1>
-      <button onClick={handleGood}>good</button>
-      <button onClick={handleNeutral}>neutral</button>
-      <button onClick={handleBad}>bad</button>
-      <button onClick={handleTotal}>setTotal</button>
-      <h1>Statistics</h1>
-      <h4>Good: {good}</h4>
-      <h4>Neutral: {neutral}</h4>
-      <h4>Bad: {bad}</h4>
-      <h4>Total: {total}</h4>
+//   const handleNeutral = () => {
+//     setNeutral(neutral + 1);
+//   };
 
-      <h1>In percent :</h1>
-      <h3>Good: {percent.good.toFixed(2)}%</h3>
-      <h3>Neutral: {percent.neutral.toFixed(2)}%</h3>
-      <h3>Bad: {percent.bad.toFixed(2)}%</h3>
-    </div>
-  );
-};
+//   const handleBad = () => {
+//     setBad(bad + 1);
+//   };
 
-export default App;
+//   const handleTotal = () => {
+//     const newTotal = good + neutral + bad;
+//     setTotal(newTotal);
+//     setPercent({
+//       good: (good / newTotal) * 100,
+//       neutral: (neutral / newTotal) * 100,
+//       bad: (bad / newTotal) * 100,
+//     });
+//   };
+
+//   return (
+//     <div>
+//       <h1>Give Feedback</h1>
+//       <button onClick={handleGood}>good</button>
+//       <button onClick={handleNeutral}>neutral</button>
+//       <button onClick={handleBad}>bad</button>
+//       <button onClick={handleTotal}>setTotal</button>
+//       <h1>Statistics</h1>
+//       <h4>Good: {good}</h4>
+//       <h4>Neutral: {neutral}</h4>
+//       <h4>Bad: {bad}</h4>
+//       <h4>Total: {total}</h4>
+
+//       <h1>In percent :</h1>
+//       <h3>Good: {percent.good.toFixed(2)}%</h3>
+//       <h3>Neutral: {percent.neutral.toFixed(2)}%</h3>
+//       <h3>Bad: {percent.bad.toFixed(2)}%</h3>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+//! Exercise 3
