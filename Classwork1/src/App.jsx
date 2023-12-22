@@ -113,3 +113,46 @@ export default App;
 */
 
 //! Exercise 3
+/*
+import { useState } from "react";
+
+const App = () => {
+  const [good, setGood] = useState(0);
+  const [bad, setBad] = useState(0);
+  const [neutral, setNeutral] = useState(0);
+  const [total, setTotal] = useState(0);
+  const [percent, setPercent] = useState({
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  });
+
+  const handleGood = () =>{
+    setGood(good+1);
+  }
+  const handleBad = () =>{
+    setBad(bad+1);
+  }
+  const handleNeutral = () =>{
+    setNeutral(neutral+1);
+  }
+  const handleTotal = () =>{
+    const newTotal = good + bad + neutral;
+    setTotal(newTotal);
+    setPercent({
+      good: (good / newTotal) * 100,
+      neutral: (neutral / newTotal) * 100,
+      bad: (bad / newTotal) * 100,
+    });
+  }
+  return(
+    <div>
+      <h1>Give Feedback</h1>
+
+
+    </div>
+
+
+  )
+}
+*/
